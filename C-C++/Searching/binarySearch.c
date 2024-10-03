@@ -13,7 +13,7 @@ void readArray(int array[])
     printf("Enter the item to be searched: ");
     scanf("%d", &item);
 }
-void binarySearch(int array[])
+int binarySearch(int array[])
 {
     int left = 0, right = size - 1;
     int mid;
@@ -22,8 +22,8 @@ void binarySearch(int array[])
         mid = (right + left) / 2;
         if (array[mid] == item)
         {
-            printf("\nElement found at position %d\n", mid + 1);
-            return;
+
+            return 1;
         }
         else if (array[mid] > item)
         {
@@ -34,10 +34,19 @@ void binarySearch(int array[])
             left = mid + 1;
         }
     }
+    return 0;
 }
 void main()
 {
-    int array[10];
+    int array[10], flag;
     readArray(array);
-    binarySearch(array);
+    flag = binarySearch(array);
+    if (flag == 1)
+    {
+        printf("Element found\n");
+    }
+    else
+    {
+        printf("Element not found\n");
+    }
 }
