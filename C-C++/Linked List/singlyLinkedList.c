@@ -184,7 +184,7 @@ int main()
     int choice, dataItem, position;
     char cont;
 
-    createNodes(3); 
+    createNodes(3);
 
     do
     {

@@ -5,23 +5,26 @@
 int size;
 int array[MAX_SIZE];
 
-
-void readInput() {
-    printf("Enter the size of the array: ");
-    scanf("%d", & size);
-
+void readInput()
+{
+    printf("Enter the size of the array : ");
+    scanf("%d", &size);
     printf("Enter the array elements:\n");
-    for (int i = 0; i < size; i++) {
-        scanf("%d", & array[i]);
+    for (int i = 0; i < size; i++)
+    {
+        scanf("%d", &array[i]);
     }
 }
 
-void insertionSort() {
-    for (int i = 1; i < size; i++) {
+void insertionSort()
+{
+    for (int i = 1; i < size; i++)
+    {
         int key = array[i];
         int j = i - 1;
 
-        while (j >= 0 && array[j] > key) {
+        while (j >= 0 && array[j] > key)
+        {
             array[j + 1] = array[j];
             j--;
         }
@@ -29,15 +32,18 @@ void insertionSort() {
     }
 }
 
-void printArray() {
+void printArray()
+{
     printf("Sorted array:\n");
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++)
+    {
         printf("%d ", array[i]);
     }
     printf("\n");
 }
 
-int main() {
+int main()
+{
     readInput();
     insertionSort();
     printArray();
