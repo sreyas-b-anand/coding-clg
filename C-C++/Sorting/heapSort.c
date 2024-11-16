@@ -7,12 +7,10 @@ void heapify(int a[], int index, int n)
     int largest = index;
     if (left < n && a[largest] < a[left])
     {
-
         largest = left;
     }
     if (right < n && a[largest] < a[right])
     {
-
         largest = right;
     }
     if (largest != index)
@@ -20,8 +18,9 @@ void heapify(int a[], int index, int n)
         int temp = a[index];
         a[index] = a[largest];
         a[largest] = temp;
-        heapify(a, largest , n);
+        heapify(a, largest, n);
     }
+    
 }
 void maxHeap(int a[], int size)
 {
@@ -44,7 +43,7 @@ void heapSort(int a[], int size)
 }
 int main()
 {
-    int ar[] = {4, 7, 2, 6, 1 , 9 , 7};
+    int ar[] = {4, 7, 2, 6, 1, 9, 7};
     int n = sizeof(ar) / sizeof(ar[0]);
     heapSort(ar, n);
     for (int i = 0; i < n; i++)

@@ -5,7 +5,7 @@ struct Node
     int data;
     struct Node *next;
 };
-struct Node *newnode, *new, *head, *temp , *current , *next , *prev;
+struct Node *newnode, *new, *head, *temp, *current, *next, *prev;
 ;
 struct Node *createNode(int data)
 {
@@ -40,23 +40,22 @@ void printList(struct Node *root)
     while (temp != NULL)
     {
         printf("%d", temp->data);
-        
-            printf(" -> ");
-        
+        printf(" -> ");
         temp = temp->next;
     }
     printf("NULL");
 }
-void reverse(){
+void reverse()
+{
     current = head->next;
-    prev=head;
-    next=current->next;
-    while(next != NULL){
+    prev = head;
+    next = current->next;
+    while (next != NULL)
+    {
         current->next = prev;
-        prev=current;
+        prev = current;
         current = next;
         next = next->next;
-        
     }
     current->next = prev;
     head->next = NULL;

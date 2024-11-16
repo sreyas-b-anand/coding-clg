@@ -65,8 +65,7 @@ void insertionSort()
         {
 
             temp = sorted;
-            while (temp->next != NULL && temp->next->data < current->data)
-            {
+            while (temp->next != NULL && temp->next->data < current->data){
                 temp = temp->next;
             }
             current->next = temp->next;
