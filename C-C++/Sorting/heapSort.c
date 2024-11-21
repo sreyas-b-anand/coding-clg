@@ -46,8 +46,7 @@ int main()
     int ar[] = {4, 7, 2, 6, 1, 9, 7};
     int n = sizeof(ar) / sizeof(ar[0]);
     heapSort(ar, n);
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++){
         printf("%d ", ar[i]);
     }
     return 0;

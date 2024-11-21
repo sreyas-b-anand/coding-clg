@@ -12,8 +12,7 @@ int partition(int a[], int low, int high)
             i++;
         while (j >= low && a[j] > pivot)
             j--;
-        if (i < j)
-        {
+        if (i < j){
             // Swap a[i] and a[j]
             int temp = a[i];
             a[i] = a[j];
